@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Models</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#" class="active" onclick="openTab(event, 'suv')">SUV</a></li>
+            <li><a href="Sedan.html" onclick="openTab(event, 'sedan')">Sedan</a></li>
+            <li><a href="Hybrid & Electric.html" onclick="openTab(event, 'Hybrid & Electric')">Hybrid & Electric</a></li>
+            
+           
+        </ul>
+    </nav>
+
+    <!-- Car Models Sections -->
+    <div class="car-content">
+        <section id="suv" class="car-models">
+            <div class="car-card">
+                <img src="./Images/Model.png" alt="2025 UX Hybrid">
+                <h3>2025 UX HYBRID</h3>
+                <p>Starting at $37,515*</p>
+            </div>
+            <div class="car-card">
+                <img src="./Images/Models1.png" alt="2025 NX">
+                <h3>2025 NX</h3>
+                <p>Starting at $41,990*</p>
+                <p>Vehicle Shown $42,585*</p>
+            </div>
+            <div class="car-card">
+                <img src="./Images/Models2.png" alt="2025 NX Hybrid">
+                <h3>2025 NX HYBRID</h3>
+                <p>Starting at $46,300*</p>
+            </div>
+            <div class="car-card">
+                <img src="./Images/Models3.png" alt="2025 NX Plug-In Hybrid EV">
+                <h3>2025 NX PLUG-IN HYBRID EV</h3>
+                <p>Starting at $62,415*</p>
+            </div>
+    
+            <div class="car-card">
+                <img src="./Images/Models4.png" alt="2025 NX Plug-In Hybrid EV">
+                <h3>2024 RZ  </h3>
+                <p>Starting at $55,175*
+                    VEHICLE SHOWN $61,075*</p>
+            </div>
+    
+            <div class="car-card">
+                <img src="./Images/Models5.png" alt="2025 NX Plug-In Hybrid EV">
+                <h3>2024 RX    </h3>
+                <p>Starting at $49,950*</p>
+            </div>
+            <div class="car-card">
+                <img src="./Images/Models6.png" alt="2025 NX Plug-In Hybrid EV">
+                <h3>2024 RX HYBRID      </h3>
+                <p>Starting at $52,100*</p>
+            </div>
+            <div class="car-card">
+                <img src="./Images/Models7.png" alt="2025 NX Plug-In Hybrid EV">
+                <h3>2024 RX PLUG-IN HYBRID EV   </h3>
+                <p>Starting at $70,580*</p>
+            </div>
+            <div class="car-card">
+                <img src="./Images/Models8.png" alt="2025 NX Plug-In Hybrid EV">
+                <h3>2024 TX   </h3>
+                <p>Starting at $55,050*</p>
+            </div>
+            <div class="car-card">
+                <img src="./Images/Models9.png" alt="2025 NX Plug-In Hybrid EV">
+                <h3>2024 TX 500h F SPORT PERFORMANCE                </h3>
+                <p>Starting at $69,350*</p>
+            </div> 
+        </section>
+
+        <section id="sedan" class="car-models" style="display: none;">
+            <div class="car-card">
+                <img src="./Images/Model.png" alt="2025 UX Hybrid">
+                <h3>2025 UX HYBRID</h3>
+                <p>Starting at $37,515*</p>
+            </div>
+            <div class="car-card">
+                <img src="./Images/Models1.png" alt="2025 NX">
+                <h3>2025 NX</h3>
+                <p>Starting at $41,990*</p>
+                <p>Vehicle Shown $42,585*</p>
+            </div>
+            
+           
+        </section>
+
+        <section id="hybrid" class="car-models" style="display: none;">
+            <div class="car-card">
+                <img src="car6.jpg" alt="2024 NX Hybrid">
+                <h3>2024 NX HYBRID</h3>
+                <p>Starting at $46,300*</p>
+            </div>
+            <div class="car-card">
+                <img src="car7.jpg" alt="2024 RZ">
+                <h3>2024 RZ</h3>
+                <p>Starting at $55,175*</p>
+                <p>Vehicle Shown $61,075*</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js">
+       function openTab(event, tabName) {
+    // Hide all sections
+    var sections = document.querySelectorAll(".car-models");
+    sections.forEach(section => {
+        section.style.display = "none";
+    });
+
+    // Remove active class from all links
+    var tabs = document.querySelectorAll(".navbar a");
+    tabs.forEach(tab => {
+        tab.classList.remove("active");
+    });
+
+    // Show the selected tab and add active class
+    document.getElementById(tabName).style.display = "grid";
+    event.currentTarget.classList.add("active");
+}
+    </script>
+</body>
+</html>
